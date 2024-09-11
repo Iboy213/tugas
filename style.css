@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background: url(images/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.images {
+    display: flex;
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.images img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    animation: float 4s ease-in-out infinite, scale-breath 8s ease-in-out infinite, rotate 12s linear infinite;
+    transform-origin: center;
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1.05) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) translateX(10px) scale(1.08) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-30px) translateX(-10px) scale(1.1) rotate(-1deg);
+    }
+    75% {
+        transform: translateY(-15px) translateX(5px) scale(1.08) rotate(0deg);
+    }
+}
+
+
+@keyframes scale-breath {
+    0%, 100% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+
+.images img:hover {
+    animation-play-state: paused;
+}
+
+
+.header h1 {
+    font-size: 3rem; 
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 10%;
+    animation: fadeIn 3s ease-in-out;
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; 
+        letter-spacing: 2px;
+    }
+}
