@@ -8,6 +8,10 @@
     <!-- Link CSS Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM7I8H4O8wRsmk6e7kW8vyy4l/6T7w5l3K9jx" crossorigin="anonymous">
+
+    <!-- Link CSS AOS (Animate On Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         body {
             background-color: #f4f4f4;
@@ -68,21 +72,21 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" data-aos="fade-up">
         <h1 class="display-4">Konsep Layanan Jaringan dalam Kehidupan Modern</h1>
     </header>
 
     <section class="container my-4">
-        <h2 class="section-title">Peran Jaringan</h2>
-        <div class="card mb-4">
+        <h2 class="section-title" data-aos="fade-up">Peran Jaringan</h2>
+        <div class="card mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="card-body">
                 <p>Dalam kehidupan modern saat ini, jaringan memainkan peran krusial dalam mendukung berbagai aktivitas, baik di rumah, sekolah, bisnis, maupun pemerintahan. Jaringan memungkinkan perangkat untuk terhubung dan bertukar informasi secara real-time, mendukung layanan digital seperti internet, cloud computing, e-commerce, media sosial, serta komunikasi jarak jauh. Jaringan juga berfungsi sebagai infrastruktur utama untuk layanan internet of things (IoT), yang semakin banyak digunakan dalam berbagai bidang seperti kesehatan, transportasi, rumah pintar, dan industri.</p>
-                <img src="https://images.unsplash.com/photo-1516685750317-e50a28f69a18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3MjR8MHwxfGFsbHwxfHx8fHx8fHwxNjY4NzUwODI2&ixlib=rb-1.2.1&q=80&w=800" alt="Ilustrasi Jaringan" class="img-fluid rounded mb-3">
+                <img src="th.jpeg" alt="Ilustrasi Jaringan" class="img-fluid rounded mb-3">
             </div>
         </div>
 
-        <h2 class="section-title">Jenis-Jenis Jaringan dalam Teknologi</h2>
-        <div class="card mb-4">
+        <h2 class="section-title" data-aos="fade-up">Jenis-Jenis Jaringan dalam Teknologi</h2>
+        <div class="card mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card-body">
                 <ul class="list-disc pl-4">
                     <li><strong>Jaringan Kabel:</strong>
@@ -103,8 +107,8 @@
             </div>
         </div>
 
-        <h2 class="section-title">Langkah-Langkah dalam Membangun Jaringan Kabel dan Nirkabel</h2>
-        <div class="card mb-4">
+        <h2 class="section-title" data-aos="fade-up">Langkah-Langkah dalam Membangun Jaringan Kabel dan Nirkabel</h2>
+        <div class="card mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card-body">
                 <h3 class="font-weight-bold">1. Membangun Jaringan Kabel:</h3>
                 <ol class="list-decimal pl-4 mb-3">
@@ -125,29 +129,39 @@
             </div>
         </div>
 
-        <h2 class="section-title">Cara Menganalisis Trouble Shooting pada Jaringan</h2>
-        <div class="card mb-4">
+        <h2 class="section-title" data-aos="fade-up">Cara Menganalisis Trouble Shooting pada Jaringan</h2>
+        <div class="card mb-4" data-aos="fade-up" data-aos-delay="400">
             <div class="card-body">
-                <ol class="list-decimal pl-4">
-                    <li><strong>Identifikasi Masalah:</strong> Catat keluhan pengguna, misalnya, tidak dapat terhubung ke internet.</li>
-                    <li><strong>Pemeriksaan Fisik:</strong> Periksa semua kabel dan perangkat keras (modem, router) untuk memastikan tidak ada yang rusak.</li>
-                    <li><strong>Uji Koneksi:</strong> Lakukan ping ke router dan website untuk mengidentifikasi masalah koneksi.</li>
-                    <li><strong>Pemeriksaan Pengaturan:</strong> Periksa pengaturan IP, DNS, dan konfigurasi firewall.</li>
-                    <li><strong>Reboot Perangkat:</strong> Kadang-kadang reboot modem dan router dapat memperbaiki masalah.</li>
-                    <li><strong>Dokumentasi:</strong> Catat langkah-langkah yang telah diambil untuk menyelesaikan masalah.</li>
-                </ol>
-                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3MjR8MHwxfGFsbHw4fHx8fHx8fHwxNjY4NzUwODI2&ixlib=rb-1.2.1&q=80&w=800" alt="Trouble Shooting Jaringan" class="img-fluid rounded mb-3">
+                <p>Untuk mengatasi masalah jaringan, beberapa langkah yang umum dilakukan antara lain:</p>
+                <ul class="list-disc pl-4">
+                    <li><strong>Periksa Koneksi Fisik:</strong> Pastikan kabel atau perangkat nirkabel terhubung dengan benar.</li>
+                    <li><strong>Reset Perangkat:</strong> Mulai ulang router, switch, atau access point untuk memperbaiki masalah sementara.</li>
+                    <li><strong>Diagnosa Alamat IP:</strong> Gunakan perintah seperti `ipconfig` atau `ping` untuk memastikan perangkat memiliki alamat IP yang benar dan dapat berkomunikasi.</li>
+                    <li><strong>Monitor Trafik Jaringan:</strong> Gunakan alat seperti Wireshark untuk memantau paket data yang lewat di jaringan.</li>
+                </ul>
             </div>
         </div>
-
     </section>
 
     <footer class="text-center">
-        <p></p>
+        <p>Sekian terima kasih😅</p>
     </footer>
 
     <!-- Link JS Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link JS AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
 </body>
 
 </html>
