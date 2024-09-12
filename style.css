@@ -8,14 +8,14 @@
 
 /* Background image for the body */
 body {
-    background: url(images/background.jpg) no-repeat center center fixed;
+    background: url(background.jpg) no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
 }
 
 /* Hero section styles */
 .hero {
-    background-image: url('/images/background.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
 }
