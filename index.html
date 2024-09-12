@@ -7,20 +7,14 @@
     <title>Portofolio Saya</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .hero {
-            background-image: url('background.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar dengan Bootstrap 5 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand hover:text-primary transition-colors duration-300 ease-in-out" href="index.html">
                 <img src="Kurumi-Tokisaki-PNG-Free-Download.png" alt="Logo" class="w-12">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,48 +24,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">HOME</a>
+                        <a class="nav-link hover:text-primary transition-colors duration-300 ease-in-out" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tugas.html">TUGAS</a>
+                        <a class="nav-link hover:text-primary transition-colors duration-300 ease-in-out" href="tugas.html">TUGAS</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+    <!-- Hero Section -->
     <div class="hero text-white text-center py-24">
-        <h1 class="text-4xl font-bold mb-4 animate-fade-in">Hello, I Am Iboy</h1>
-        <div class="images mb-4">
-            <img src="kurumi.png" alt="Kurumi" class="max-w-lg mx-auto rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold mb-4 animate-fade-in">Hello, I Iboy</h1>
+        <div class="images mb-4 animate-zoom-in">
+            <img src="kurumi.png" alt="Kurumi" class="max-w-lg mx-auto rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out">
         </div>
     </div>
-    
-    <style>
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards; 
-        }
-    </style>
-    
 
-<footer class="bg-gray-800 text-white text-center py-4">
-        <p>
-            
-        </p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Portofolio Saya. Semua hak dilindungi.</p>
     </footer>
-    
-  
+
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
