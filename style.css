@@ -1,3 +1,4 @@
+/* Resetting margins and padding */
 * {
     margin: 0;
     padding: 0;
@@ -5,25 +6,67 @@
     font-family: 'Times New Roman', serif;
 }
 
+/* Background image for the body */
 body {
-    background: url(background.jpg) no-repeat center center fixed;
+    background: url(images/background.jpg) no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
 }
 
-
-.images {
-    display: flex;
-    width: 50%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+/* Hero section styles */
+.hero {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
+/* Animation for the hero text fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animation for the image zoom-in */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-zoom-in {
+    animation: zoomIn 1.5s ease-out forwards;
+}
+
+/* Navbar hover effect */
+/* .navbar-brand:hover, .nav-link:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+} */
+
+/* Smooth transition for transform effects */
+.transition-transform {
+    transition: transform 0.3s ease-in-out;
+}
+.transition-colors {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Animation for the floating and scaling image */
 .images img {
     max-width: 100%;
     height: auto;
@@ -48,7 +91,6 @@ body {
     }
 }
 
-
 @keyframes scale-breath {
     0%, 100% {
         transform: scale(1.05);
@@ -58,55 +100,32 @@ body {
     }
 }
 
-
-
-
-
-
 .images img:hover {
     animation-play-state: paused;
+    transform: scale(1.15) rotate(3deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-.header h1 {
-    font-size: 3rem; 
-    color: #fff;
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    margin-top: 10%;
-    animation: fadeIn 3s ease-in-out;
-    background: linear-gradient(135deg, #84fab0, #8fd3f4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
+/* Media query for smaller screens */
 @media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
-        letter-spacing: 3px;
+    .hero h1 {
+        font-size: 2.5rem; /* Menyesuaikan ukuran font untuk perangkat kecil */
+    }
+    .images img {
+        max-width: 80%; /* Mengurangi ukuran gambar di perangkat kecil */
     }
 }
-
 
 @media (max-width: 480px) {
-    .header h1 {
-        font-size: 1.5rem; 
-        letter-spacing: 2px;
+    .hero h1 {
+        font-size: 2rem; /* Ukuran font lebih kecil untuk ponsel */
     }
 }
